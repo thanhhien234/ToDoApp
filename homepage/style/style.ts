@@ -1,0 +1,77 @@
+import {StyleSheet} from 'react-native';
+
+export const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#e9eaed',
+    flex: 1,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginTop: 50,
+  },
+  input: {
+    backgroundColor: 'white',
+    borderRadius: 20,
+    height: 40,
+    marginTop: 20,
+    paddingHorizontal: 20,
+    shadowColor: 'black',
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    flexGrow: 1,
+  },
+  btn: {
+    alignItems: 'center',
+    backgroundColor: 'white',
+    borderRadius: 20,
+    height: 40,
+    justifyContent: 'center',
+    marginTop: 20,
+    shadowColor: 'black',
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    width: 40,
+  },
+  img: {
+    height: 25,
+    width: 25,
+  },
+  wrapper: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    gap: 10,
+  },
+  item: {
+    display: 'flex',
+    flexDirection: 'row',
+    backgroundColor: 'white',
+    padding: 10,
+    alignItems: 'center',
+  },
+  subItem:{
+    display: 'flex',
+    flexDirection: 'row',
+    flexGrow: 1,
+    alignItems: 'center',
+  },
+  circle:{
+    width: 14,
+    height: 14,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#92c3d5',
+  },
+  square:{
+    width: 14,
+    height: 14,
+    backgroundColor: '#92c3d5',
+    marginRight: 10,
+  },
+});
