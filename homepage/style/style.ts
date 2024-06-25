@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
@@ -47,6 +47,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     width: '100%',
     gap: 10,
+    marginBottom: Platform.OS === 'ios' ? 30 : 15,
   },
   item: {
     display: 'flex',
@@ -54,21 +55,23 @@ export const styles = StyleSheet.create({
     backgroundColor: 'white',
     padding: 10,
     alignItems: 'center',
+    marginBottom: 15,
+    borderRadius: 10,
   },
-  subItem:{
+  subItem: {
     display: 'flex',
     flexDirection: 'row',
     flexGrow: 1,
     alignItems: 'center',
   },
-  circle:{
+  circle: {
     width: 14,
     height: 14,
     borderRadius: 12,
     borderWidth: 1,
     borderColor: '#92c3d5',
   },
-  square:{
+  square: {
     width: 14,
     height: 14,
     backgroundColor: '#92c3d5',
