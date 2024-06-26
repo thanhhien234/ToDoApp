@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
+import React, {memo} from 'react';
 import { View, Text, TouchableOpacity} from 'react-native';
 import {styles} from '../style/style';
 
@@ -13,7 +13,7 @@ interface TaskItemProps {  //có thể kế thừa
 //     content: String;
 // }
 
-const TaskItem = (props: TaskItemProps) => {
+const TaskItem = memo((props: TaskItemProps) => {
     return (
         <TouchableOpacity onPress={() => props.onDelete()}>
             <View style={styles.item}>
@@ -25,6 +25,6 @@ const TaskItem = (props: TaskItemProps) => {
             </View>
         </TouchableOpacity>
     );
-};
+});
 
 export {TaskItem}
