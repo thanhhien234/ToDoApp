@@ -36,9 +36,14 @@ class Homepage extends Component<{}, State> {  //sử dụng interface State
     this.setState({ inputContent: text });
   };
 
+  _onDelete = (index: number) => {
+    this.listItem.splice(index, 1);
+    this.setState({ listItem: [...this.listItem] });
+  }
+
   _renderTaskItems = () => {  //lấy giá trị từ state để render
     return this.state.listItem.map((item, index) => (
-      <TaskItem content={item} key={index} />
+      <TaskItem content={item} key={index} onDelete={this._onDelete}/>
     ));
   };
 

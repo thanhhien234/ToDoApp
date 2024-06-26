@@ -1,11 +1,12 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, Text} from 'react-native';
+import { View, Text, TouchableOpacity} from 'react-native';
 import {styles} from '../style/style';
 
 
 interface TaskItemProps {  //có thể kế thừa
     content: String;
+    onDelete: Function;
 }
 
 // type TaskItemProps {  //không thể kế thừa
@@ -14,13 +15,15 @@ interface TaskItemProps {  //có thể kế thừa
 
 const TaskItem = (props: TaskItemProps) => {
     return (
-        <View style={styles.item}>
-            <View style={styles.subItem}>
-                <View style={styles.square} />
-                <Text>{props.content}</Text>
+        <TouchableOpacity onPress={() => props.onDelete()}>
+            <View style={styles.item}>
+                <View style={styles.subItem}>
+                    <View style={styles.square} />
+                    <Text>{props.content}</Text>
+                </View>
+                <View style={styles.circle} />
             </View>
-            <View style={styles.circle} />
-        </View>
+        </TouchableOpacity>
     );
 };
 
